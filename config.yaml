@@ -1,0 +1,35 @@
+mel_dim: 80
+sample_rate: 22050
+window_size: 1024
+hop_size: 256
+train_dataset_path: dataset.json.train
+val_dataset_path: dataset.json.valid
+test_dataset_path: dataset.json.test
+phnset: dataset.json.phnset
+log_dir : log/bznsyp
+checkpoint: "log/bznsyp/ckpt/slimtransformer_2.pt"
+start_from: 1
+max_step: 200000
+epoch: 1000
+
+learning_rate: 0.0001
+batch_size: 4
+random_seed: 12345
+
+enc_channels: 192
+enc_filter_channels: 768
+dp_filter_channels: 256
+enc_heads: 2
+enc_layers: 6
+enc_kernel: 3
+enc_dropout: 0.1
+
+dec_channels: 192
+dec_filter_channels: 768
+dec_heads: 2
+dec_layers: 6
+dec_kernel: 3
+dec_dropout: 0.1
+
+enc_max_length: 128
+dec_max_length: 2048
